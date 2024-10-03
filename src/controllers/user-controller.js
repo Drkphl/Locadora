@@ -76,7 +76,6 @@ export const login = async (req, res) => {
             email: req.body.email,
         }).exec();
 
-        //validando se existe o usuário cadastrado
         if (user && (await user.senhaCorreta(req.body.password))) {
             const token = jwtService.generateAccessToken({
                 tipo: user.tipo,

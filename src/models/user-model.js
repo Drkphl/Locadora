@@ -6,7 +6,7 @@ const userSchema = new db.Schema({
         type: String,
         required: true,
     },
-    Birthday: {
+    birthday: {
         type: Date,
         required: true,
     },
